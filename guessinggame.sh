@@ -1,4 +1,4 @@
-function guessingame {
+function guessinggame {
     local numberOfFiles=$(ls | wc -l)
     while true
     do
@@ -7,7 +7,7 @@ function guessingame {
 
         if [[ $response = $numberOfFiles ]]
         then
-            echo "Correct! Program ending now."
+            echo "Correct! Congratulations, program ending now."
             return 0
         else
             if [[ $response -gt $numberOfFiles ]]
@@ -21,3 +21,5 @@ function guessingame {
     done
 
 }
+
+guessinggame
